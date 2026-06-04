@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>httpd — Built in C</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>It works.</h1>
+    <p class="subtitle">
+      A multi-threaded HTTP/1.1 server built from scratch in C.
+      No libraries. No frameworks. Just POSIX.
+    </p>
+  </header>
+
+  <section>
+    <h2>What's running right now</h2>
+    <ul>
+      <li><strong>TCP socket server</strong> — raw BSD sockets, accept loop, SIGINT shutdown</li>
+      <li><strong>HTTP/1.1 parser</strong> — state machine, partial read handling, 40 unit tests</li>
+      <li><strong>Thread pool</strong> — 4 workers, mutex + condition variable work queue, graceful drain</li>
+      <li><strong>Static file server</strong> — <code>sendfile(2)</code> zero-copy, MIME types, path traversal protection</li>
+      <li><strong>Keep-alive</strong> — persistent connections, <code>SO_RCVTIMEO</code> idle timeout, pipelining</li>
+      <li><strong>Chunked encoding</strong> — Transfer-Encoding: chunked for unknown-length responses</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Explore</h2>
+    <ul>
+      <li><a href="/about.html">About this project</a></li>
+      <li><a href="/data.json">JSON endpoint</a></li>
+      <li><a href="/subdir/">Directory listing</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <small>httpd/0.5 &mdash; built with C, pthreads, and sendfile(2)</small>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

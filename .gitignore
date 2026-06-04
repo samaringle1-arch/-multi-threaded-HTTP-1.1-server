@@ -1,0 +1,79 @@
+# ─── Compiled binaries ───────────────────────────────────────────────
+server
+test_parser
+test_pool
+test_files
+test_ka
+fuzz_parser
+
+# ─── Object files and build artifacts ────────────────────────────────
+*.o
+*.a
+*.so
+*.out
+
+# ─── AddressSanitizer / UBSan runtime files ──────────────────────────
+# Generated when running binaries built with -fsanitize=address
+*.log
+
+# ─── Valgrind output ─────────────────────────────────────────────────
+vgcore.*
+valgrind-out.txt
+
+# ─── AFL fuzzer output ───────────────────────────────────────────────
+fuzz_out/
+fuzz_in/
+
+# ─── Editor and IDE files ────────────────────────────────────────────
+
+# VS Code
+.vscode/
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+*.iml
+
+# Vim
+*.swp
+*.swo
+*~
+.*.swp
+
+# Emacs
+\#*\#
+.\#*
+
+# ─── OS generated files ──────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# ─── GDB / debug artifacts ───────────────────────────────────────────
+.gdb_history
+core
+core.*
+
+# ─── Dependency / package managers (if added later) ──────────────────
+# vcpkg
+vcpkg_installed/
+
+# ─── Environment / secrets (never commit these) ──────────────────────
+.env
+*.pem
+*.key
+*.crt
+*.p12
+
+# ─── Benchmark output (large, re-runnable) ───────────────────────────
+ab_output.txt
+wrk_output.txt
